@@ -34,11 +34,12 @@ class ViewController: UIViewController {
 
     
     @IBAction func nextButtonPressed(sender: UIBarButtonItem) {
-        var currentIndex = Int(arc4random_uniform(UInt32(balloons.count)))
+        let balloon = balloons[currentIndex]
         
-        myImageView.image = balloons[currentIndex].image
-        balloonLabel.text = "\(balloons[currentIndex].number) Balloons"
+        myImageView.image = balloon.image
+        balloonLabel.text = "\(balloon.number) Balloons"
         
+        currentIndex++
     }
     
     func createBalloon() {
