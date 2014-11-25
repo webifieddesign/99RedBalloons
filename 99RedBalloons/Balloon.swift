@@ -12,10 +12,4 @@ import UIKit
 struct Balloon {
     var number = 0
     var image = UIImage(named: "")
-    
-    func numberOfBalloons() -> Int {
-        let randomNumber = Int(arc4random_uniform(UInt32(3)))
-        
-        return randomNumber
-    }
 }
